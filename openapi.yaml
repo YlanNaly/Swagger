@@ -73,8 +73,8 @@ paths:
       tags:
         - Students
       operationId:  Add Student
-      summary : Create new student
-      description: Create new student
+      summary : Update new student
+      description: Update student
       requestBody:
         description: Student to be created
         content:
@@ -199,8 +199,8 @@ paths:
       tags:
         - Courses
       operationId: Add new Course
-      summary : Create new course
-      description: Create new course
+      summary : Update course
+      description: Update course
       requestBody:
         description: Courses to be created
         content:

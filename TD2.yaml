@@ -427,7 +427,7 @@ paths:
       tags:
         - Projection
       summary: Get Projection for a specified week
-      description: Get the list of projection for a
+      description: Get the list of projection for a specified week
       parameters:
         - name: date
           in: query

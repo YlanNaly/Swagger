@@ -426,8 +426,8 @@ paths:
     get: 
       tags:
         - Projection
-      summary: Get film avaible of a week
-      description: Get film avaible of the week 
+      summary: Get Projection for a specified week
+      description: Get the list of projection for a
       parameters:
         - name: date
           in: query
@@ -437,7 +437,7 @@ paths:
           required: true
       responses:
         200:
-          description: Film avaible of a week
+          description: Projection of a week
           content:
             application/json:
               schema:   
@@ -701,7 +701,6 @@ components:
           type: number
           example: 1
     weekProjection:
-      description: Films of week
       type: object
       properties:
         weekOf: 

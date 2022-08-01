@@ -422,7 +422,31 @@ paths:
         400:
           description: Error
           content: {}
-  
+  /projections/week/:
+    get: 
+      tags:
+        - Projection
+      summary: Get film avaible of a week
+      description: Get film avaible of the week 
+      parameters:
+        - name: date
+          in: query
+          schema:   
+            type: string
+            format: date-time  
+          required: true
+      responses:
+        200:
+          description: Film avaible of a week
+          content:
+            application/json:
+              schema:   
+                type: array
+                items:
+                $ref: '#/components/schemas/weekProjection'
+        400:
+          description: Bad request
+
   /categories:
     get:
       tags:
@@ -676,3 +700,14 @@ components:
         id:
           type: number
           example: 1
+    weekProjection:
+      description: Films of week
+      type: object
+      properties:
+        weekOf: 
+          type: string
+          format: date-time
+        Projections:  
+          type: array
+          items:
+            $ref: '#/components/schemas/Projection'
